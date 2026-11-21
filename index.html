@@ -145,7 +145,7 @@
   .stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
   .stat{padding:30px 26px;border-right:1px solid var(--line)}
   .stat:last-child{border-right:0}
-  .stat b{font-size:40px;letter-spacing:-.03em;font-weight:600;display:block}
+  .stat b{font-size:22px;margin-bottom:4px;letter-spacing:-.03em;font-weight:600;display:block}
   .stat span{color:var(--muted);font-size:14px}
 
   .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
@@ -156,6 +156,11 @@
   .tile p{color:var(--muted);font-size:15px;margin-top:8px;max-width:420px}
   .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(200,255,90,.1);border:1px solid rgba(200,255,90,.22);color:var(--accent)}
   .ico svg{width:22px;height:22px}
+  .pulse{width:100%;height:70px;margin-top:22px}
+  .pulse path{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:520;stroke-dashoffset:520;animation:beat 3.2s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(200,255,90,.6))}
+  @keyframes beat{40%,70%{stroke-dashoffset:0}100%{stroke-dashoffset:-520}}
+  .st{display:inline-block;font-style:normal;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted);margin-bottom:14px}
+  .st-build{border-color:rgba(200,255,90,.4);color:var(--accent);background:rgba(200,255,90,.08)}
   .speed{margin-top:22px;display:flex;flex-direction:column;gap:8px}
   .speed div{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.25)}
   .speed b{color:var(--accent);font-weight:500}
@@ -266,7 +271,7 @@
     .card{right:-20px;width:200px;height:126px}
     .f2{right:-14px}
     .stat{padding:22px 18px}
-    .stat b{font-size:30px}
+    .stat b{font-size:20px}
     .nav .btn{padding:10px 16px;font-size:14px}
   }
 </style>
@@ -296,11 +301,10 @@
       <div>
         <span class="pill rv"><b>Waitlist open</b><span class="live"></span> Early access is rolling out soon</span>
         <h1 class="rv"><span class="soft">Money,</span><br><span class="soft">reimagined.</span><br><span class="acc">Get in first.</span></h1>
-        <p class="lede rv">Saving, spending, sending and investing — together in one app, with low costs and clear information. Join the waitlist and be among the first to get access.</p>
+        <p class="lede rv">We're building one app for saving, spending and sending money, with low costs and clear information. Join the waitlist to follow the build and get founding-member access.</p>
         <div class="herojoin rv" id="join">
           <div id="formWrap">
             <form id="waitlistForm" class="heroform" novalidate>
-              <div class="setup-warn" id="setupWarn">Formspree isn't connected yet — set <code>FORMSPREE_ID</code> at the bottom of this file.</div>
               <input type="text" id="name" name="name" autocomplete="name" placeholder="Full name" aria-label="Full name" required />
               <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" aria-label="Email address" required />
               <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -353,7 +357,7 @@
             <div class="tx"><div>Transfer to Ama<small>Yesterday</small></div><span>−$120.00</span></div>
           </div>
         </div>
-        <div class="float f1"><span style="color:var(--muted)">Received in <span class="mono" style="color:var(--accent)">84 ms</span></span><b>+$2,400.00</b></div>
+        <div class="float f1"><span style="color:var(--muted)">Transfer received</span><b>+$2,400.00</b></div>
         <div class="float f2" style="display:flex;gap:12px;align-items:center">
           <svg class="ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" stroke="rgba(255,255,255,.12)" stroke-width="5" fill="none"/><circle cx="22" cy="22" r="18" stroke="#c8ff5a" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="32" transform="rotate(-90 22 22)"/></svg>
           <div><span style="color:var(--muted)">Savings goal</span><b>72%</b></div>
@@ -364,17 +368,17 @@
 
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>Card payment <em class="mono">12 ms</em></span><span>Transfer settled <em class="mono">84 ms</em></span><span>Savings deposit <em class="mono">31 ms</em></span><span>Mobile money <em class="mono">96 ms</em></span><span>Investment order <em class="mono">47 ms</em></span><span>Bank withdrawal <em class="mono">63 ms</em></span><span>Card payment <em class="mono">9 ms</em></span><span>Transfer settled <em class="mono">71 ms</em></span>
-      <span>Card payment <em class="mono">12 ms</em></span><span>Transfer settled <em class="mono">84 ms</em></span><span>Savings deposit <em class="mono">31 ms</em></span><span>Mobile money <em class="mono">96 ms</em></span><span>Investment order <em class="mono">47 ms</em></span><span>Bank withdrawal <em class="mono">63 ms</em></span><span>Card payment <em class="mono">9 ms</em></span><span>Transfer settled <em class="mono">71 ms</em></span>
+      <span>Smart savings <em class="mono">Building</em></span><span>Member transfers <em class="mono">Planned</em></span><span>Debit card <em class="mono">Planned</em></span><span>Card controls <em class="mono">Planned</em></span><span>Payment alerts <em class="mono">Building</em></span><span>Alternative investments <em class="mono">Exploring</em></span><span>Web + mobile <em class="mono">Building</em></span><span>Founding members <em class="mono">Open now</em></span>
+      <span>Smart savings <em class="mono">Building</em></span><span>Member transfers <em class="mono">Planned</em></span><span>Debit card <em class="mono">Planned</em></span><span>Card controls <em class="mono">Planned</em></span><span>Payment alerts <em class="mono">Building</em></span><span>Alternative investments <em class="mono">Exploring</em></span><span>Web + mobile <em class="mono">Building</em></span><span>Founding members <em class="mono">Open now</em></span>
     </div>
   </div>
 
   <section>
     <div class="wrap">
       <div class="stats rv">
-        <div class="stat"><b>$0</b><span>To send to Hoardrun members</span></div>
-        <div class="stat"><b>24/7</b><span>Freeze your card any time</span></div>
-        <div class="stat"><b>2 min</b><span>To check your identity</span></div>
+        <div class="stat"><i class="st st-build">Building</i><b>Savings goals</b><span>Short- and long-term goals to build the habit</span></div>
+        <div class="stat"><i class="st">Planned</i><b>Free member transfers</b><span>Planned: free transfers between Hoardrun members</span></div>
+        <div class="stat"><i class="st">Planned</i><b>Card controls</b><span>Planned: freeze your card any time from the app</span></div>
       </div>
     </div>
   </section>
@@ -383,36 +387,36 @@
     <div class="wrap">
       <div class="head rv">
         <div><div class="eyebrow">What's coming</div><h2>Everything your money<br>needs. One app.</h2></div>
-        <p class="sub">Built for speed, designed for clarity, and secured end to end. Here's what you'll unlock when your spot opens.</p>
+        <p class="sub">Designed to be fast and clear, with your data encrypted in transit and at rest. Here's what we're building — nothing is live yet.</p>
       </div>
       <div class="bento">
         <div class="tile wide rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-          <h3>Lightning fast</h3>
-          <p>Transactions processed in milliseconds on infrastructure built for speed.</p>
-          <div class="speed mono"><div>Card payment<b>12 ms</b></div><div>Transfer settled<b>84 ms</b></div><div>Savings deposit<b>31 ms</b></div></div>
+          <h3>Built to be fast</h3>
+          <p>We're designing Hoardrun so everyday money moves feel quick. Transfers to and from banks depend on outside networks.</p>
+          <svg class="pulse" viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40h120l18-26 22 48 26-62 22 50 14-10h178"/></svg>
         </div>
         <div class="tile wide rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
           <h3>Serious security</h3>
-          <p>Your data is encrypted in transit and at rest. You're told about every payment and every change to how you sign in.</p>
+          <p>Encrypted in transit and at rest. We're building alerts for every payment and every change to how you sign in.</p>
           <div class="hash mono">A7F3 09C2 <span class="hl">5E1B D84A</span> 72FE 11B9 C6D0 3A58 E94F 6B27 A7F3 09C2 5E1B <span class="hl">D84A 72FE</span> 11B9 C6D0 3A58</div>
         </div>
         <div class="tile rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M21 12h-6a2 2 0 0 0 0 4h6v-4z"/></svg></div>
           <h3>Smart savings</h3>
-          <p>Flexible short- and long-term savings options to grow your funds securely.</p>
+          <p>Building: flexible short- and long-term savings goals to help you put money aside.</p>
           <div class="bars"><i style="height:30%"></i><i style="height:45%"></i><i style="height:40%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
         </div>
         <div class="tile rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg></div>
-          <h3>Invest in private markets</h3>
-          <p>Get into private equity, real estate and venture capital deals. Investments can lose value.</p>
+          <h3>Alternative investments</h3>
+          <p>We're exploring access to alternative investments such as private equity, real estate and venture capital. Investing involves risk.</p>
         </div>
         <div class="tile rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div>
-          <h3>Instant transfers</h3>
-          <p>Send money to other Hoardrun members instantly, and move money to and from your bank.</p>
+          <h3>Member transfers</h3>
+          <p>Planned: send money to other Hoardrun members quickly, and move money to and from your bank.</p>
         </div>
       </div>
     </div>
@@ -435,11 +439,13 @@
     <div class="wrap">
       <div class="head rv" style="justify-content:center;text-align:center"><div><div class="eyebrow">FAQ</div><h2>Questions, answered.</h2></div></div>
       <div class="faq rv">
-        <details><summary>What is Hoardrun?</summary><p>Hoardrun is a financial technology company, not a bank. We bring saving, spending, sending and investing together in one app, with low costs and clear information so you can decide for yourself.</p></details>
+        <details><summary>What is Hoardrun?</summary><p>Hoardrun is a financial technology company, not a bank. We're building one app for saving, spending and sending money, with low costs and clear information so you can decide for yourself.</p></details>
+        <details><summary>Is Hoardrun live yet?</summary><p>Not yet. Everything on this page is in development or on our roadmap. Join the waitlist to follow the build and be among the first invited when accounts open.</p></details>
+        <details><summary>Who holds my money?</summary><p>Hoardrun is not a bank, and we aren't holding anyone's money today. We plan to work with licensed banking partners, and before any account opens we'll tell you exactly who holds customer funds and what protections apply.</p></details>
         <details><summary>Does joining the waitlist cost anything?</summary><p>No. Joining the waitlist is completely free, and there's no obligation to open an account when your invite arrives.</p></details>
-        <details><summary>When will I get access?</summary><p>We're opening access in waves. Waitlist members are invited first, in the order they signed up. We'll email you when your spot is ready.</p></details>
+        <details><summary>When will I get access?</summary><p>We'll open access in waves once the app is ready, and waitlist members are invited first. We'll email you when your spot is ready.</p></details>
         <details><summary>What do you do with my information?</summary><p>We only use your details to manage your waitlist spot and send you launch updates. We don't sell your data, and you can unsubscribe any time.</p></details>
-        <details><summary>Can I use Hoardrun on my computer?</summary><p>Yes. Hoardrun works on your phone or your computer, wherever you are.</p></details>
+        <details><summary>Will Hoardrun work on my computer?</summary><p>That's the plan. We're building Hoardrun for both phone and computer.</p></details>
       </div>
     </div>
   </section>
@@ -473,7 +479,6 @@
   const endpoint = "https://formspree.io/f/" + FORMSPREE_ID;
   const configured = FORMSPREE_ID && FORMSPREE_ID !== "YOUR_FORM_ID";
   document.getElementById("yr").textContent = new Date().getFullYear();
-  if (!configured) document.getElementById("setupWarn").style.display = "block";
 
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
