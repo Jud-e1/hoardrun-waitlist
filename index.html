@@ -4,9 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hoardrun Waitlist</title>
-<meta name="description" content="Join the Hoardrun waitlist. Save, spend, send and invest in one app. Get early access." />
+<meta name="description" content="Join the Hoardrun waitlist. Save, invest and bank in one app, with a coach that tells you what to do next." />
 <meta property="og:title" content="Hoardrun — Join the waitlist" />
-<meta property="og:description" content="Saving, spending, sending and investing in one app. Get early access." />
+<meta property="og:description" content="Save, invest and bank in one app, with a coach that tells you what to do next." />
 <meta name="theme-color" content="#0a0a0a" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -169,6 +169,22 @@
   .bars{display:flex;align-items:flex-end;gap:8px;height:90px;margin-top:22px}
   .bars i{flex:1;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,var(--accent),rgba(200,255,90,.15))}
 
+  .coach{max-width:230px}
+  .f1.coach{top:auto;bottom:30px;left:-14px}
+  .coach b{font-size:14px;margin:4px 0 2px}
+  .coach-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+  .coach-tag i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+  .chat{margin-top:20px;display:flex;flex-direction:column;gap:8px}
+  .chat .b{max-width:85%;padding:10px 14px;border-radius:16px;font-size:13.5px;line-height:1.45}
+  .chat .you{align-self:flex-end;background:var(--card-2);border:1px solid var(--line);color:#ddd;border-bottom-right-radius:4px}
+  .chat .bot{align-self:flex-start;background:rgba(200,255,90,.1);border:1px solid rgba(200,255,90,.3);color:#e9ffc4;border-bottom-left-radius:4px}
+  .team{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .person{display:flex;gap:20px;align-items:flex-start;padding:28px;border-radius:var(--radius);border:1px solid var(--line);background:var(--card)}
+  .av{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:20px;color:var(--accent-ink);background:linear-gradient(135deg,var(--accent),#7fae22)}
+  .person h3{font-size:20px;font-weight:600}
+  .person .role{font-size:13px;color:var(--accent);margin:2px 0 10px}
+  .person p{color:var(--muted);font-size:15px}
+  @media (max-width:760px){.team{grid-template-columns:1fr}.person{padding:22px}}
   /* perks */
   .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   .perk{padding:28px;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
@@ -289,6 +305,7 @@
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#perks">Early access</a>
+      <a href="#team">Team</a>
       <a href="#faq">FAQ</a>
     </div>
     <a href="#join" class="btn btn-light">Join waitlist</a>
@@ -301,7 +318,7 @@
       <div>
         <span class="pill rv"><b>Waitlist open</b><span class="live"></span> Early access is rolling out soon</span>
         <h1 class="rv"><span class="soft">Money,</span><br><span class="soft">reimagined.</span><br><span class="acc">Get in first.</span></h1>
-        <p class="lede rv">We're building one app for saving, spending and sending money, with low costs and clear information. Join the waitlist to follow the build and get founding-member access.</p>
+        <p class="lede rv">Save, invest and bank in one app, with a coach that tells you what to do next. Built for young professionals building an emergency fund and starting to invest. Join the waitlist for a spot in our US pilot.</p>
         <div class="herojoin rv" id="join">
           <div id="formWrap">
             <form id="waitlistForm" class="heroform" novalidate>
@@ -357,7 +374,7 @@
             <div class="tx"><div>Transfer to Ama<small>Yesterday</small></div><span>−$120.00</span></div>
           </div>
         </div>
-        <div class="float f1"><span style="color:var(--muted)">Transfer received</span><b>+$2,400.00</b></div>
+        <div class="float f1 coach"><span class="coach-tag"><i></i>Coach</span><b>Move $50 to your emergency fund</b><span style="color:var(--muted)">You're $120 under budget this week</span></div>
         <div class="float f2" style="display:flex;gap:12px;align-items:center">
           <svg class="ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" stroke="rgba(255,255,255,.12)" stroke-width="5" fill="none"/><circle cx="22" cy="22" r="18" stroke="#c8ff5a" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="32" transform="rotate(-90 22 22)"/></svg>
           <div><span style="color:var(--muted)">Savings goal</span><b>72%</b></div>
@@ -368,17 +385,17 @@
 
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span>Smart savings <em class="mono">Building</em></span><span>Member transfers <em class="mono">Planned</em></span><span>Debit card <em class="mono">Planned</em></span><span>Card controls <em class="mono">Planned</em></span><span>Payment alerts <em class="mono">Building</em></span><span>Alternative investments <em class="mono">Exploring</em></span><span>Web + mobile <em class="mono">Building</em></span><span>Founding members <em class="mono">Open now</em></span>
-      <span>Smart savings <em class="mono">Building</em></span><span>Member transfers <em class="mono">Planned</em></span><span>Debit card <em class="mono">Planned</em></span><span>Card controls <em class="mono">Planned</em></span><span>Payment alerts <em class="mono">Building</em></span><span>Alternative investments <em class="mono">Exploring</em></span><span>Web + mobile <em class="mono">Building</em></span><span>Founding members <em class="mono">Open now</em></span>
+      <span>Mobile banking <em class="mono">Building</em></span><span>AI financial coach <em class="mono">Building</em></span><span>Savings goals <em class="mono">Building</em></span><span>Spending alerts <em class="mono">Building</em></span><span>US pilot <em class="mono">100 users</em></span><span>Guided investing <em class="mono">Later</em></span><span>Partner bank accounts <em class="mono">Planned</em></span><span>Founding members <em class="mono">Open now</em></span>
+      <span>Mobile banking <em class="mono">Building</em></span><span>AI financial coach <em class="mono">Building</em></span><span>Savings goals <em class="mono">Building</em></span><span>Spending alerts <em class="mono">Building</em></span><span>US pilot <em class="mono">100 users</em></span><span>Guided investing <em class="mono">Later</em></span><span>Partner bank accounts <em class="mono">Planned</em></span><span>Founding members <em class="mono">Open now</em></span>
     </div>
   </div>
 
   <section>
     <div class="wrap">
       <div class="stats rv">
-        <div class="stat"><i class="st st-build">Building</i><b>Savings goals</b><span>Short- and long-term goals to build the habit</span></div>
-        <div class="stat"><i class="st">Planned</i><b>Free member transfers</b><span>Planned: free transfers between Hoardrun members</span></div>
-        <div class="stat"><i class="st">Planned</i><b>Card controls</b><span>Planned: freeze your card any time from the app</span></div>
+        <div class="stat"><i class="st st-build">Phase 1 · Building</i><b>Mobile banking</b><span>Deposits, transfers, bill payments and savings pots, through a licensed US partner bank</span></div>
+        <div class="stat"><i class="st st-build">Phase 1 · Building</i><b>AI financial coach</b><span>Spending alerts, savings goals and a plain-English next best action</span></div>
+        <div class="stat"><i class="st">Phase 3 · Later</i><b>Guided investing</b><span>ETFs and funds matched to your goals and risk, through a registered broker</span></div>
       </div>
     </div>
   </section>
@@ -387,36 +404,36 @@
     <div class="wrap">
       <div class="head rv">
         <div><div class="eyebrow">What's coming</div><h2>Everything your money<br>needs. One app.</h2></div>
-        <p class="sub">Designed to be fast and clear, with your data encrypted in transit and at rest. Here's what we're building — nothing is live yet.</p>
+        <p class="sub">Every balance comes with a clear next step. Here's what we're building for the pilot — nothing is live yet.</p>
       </div>
       <div class="bento">
         <div class="tile wide rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-          <h3>Built to be fast</h3>
-          <p>We're designing Hoardrun so everyday money moves feel quick. Transfers to and from banks depend on outside networks.</p>
-          <svg class="pulse" viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40h120l18-26 22 48 26-62 22 50 14-10h178"/></svg>
+          <h3>A coach, not just charts</h3>
+          <p>Most apps show balances. Hoardrun's coach tells you when to save, invest or cut back, in plain English. No promised returns.</p>
+          <div class="chat"><div class="b you">Can I afford a $300 trip this month?</div><div class="b bot">Yes, if you pause eating out for two weeks. Your emergency fund stays on track.</div></div>
         </div>
         <div class="tile wide rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
           <h3>Serious security</h3>
-          <p>Encrypted in transit and at rest. We're building alerts for every payment and every change to how you sign in.</p>
+          <p>Encrypted in transit and at rest, with alerts for every payment and every change to how you sign in.</p>
           <div class="hash mono">A7F3 09C2 <span class="hl">5E1B D84A</span> 72FE 11B9 C6D0 3A58 E94F 6B27 A7F3 09C2 5E1B <span class="hl">D84A 72FE</span> 11B9 C6D0 3A58</div>
         </div>
         <div class="tile rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><path d="M21 12h-6a2 2 0 0 0 0 4h6v-4z"/></svg></div>
-          <h3>Smart savings</h3>
-          <p>Building: flexible short- and long-term savings goals to help you put money aside.</p>
+          <h3>Savings goals &amp; pots</h3>
+          <p>Set an emergency-fund goal, split money into pots, and watch your progress in one place.</p>
           <div class="bars"><i style="height:30%"></i><i style="height:45%"></i><i style="height:40%"></i><i style="height:62%"></i><i style="height:70%"></i><i style="height:88%"></i><i style="height:100%"></i></div>
         </div>
         <div class="tile rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg></div>
-          <h3>Alternative investments</h3>
-          <p>We're exploring access to alternative investments such as private equity, real estate and venture capital. Investing involves risk.</p>
+          <h3>Guided investing</h3>
+          <p>Later: ETFs and funds matched to your goals and risk, through a registered broker, once the core app proves itself. Investing involves risk.</p>
         </div>
         <div class="tile rv">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div>
-          <h3>Member transfers</h3>
-          <p>Planned: send money to other Hoardrun members quickly, and move money to and from your bank.</p>
+          <h3>Mobile banking</h3>
+          <p>Deposits, transfers and bill payments in one place, through a licensed US partner bank. Hoardrun is not a bank.</p>
         </div>
       </div>
     </div>
@@ -430,7 +447,18 @@
       <div class="perks">
         <div class="perk rv"><div class="n mono">01</div><h3>Priority access</h3><p>Accounts open in waves. The earlier you join, the sooner your invite arrives.</p></div>
         <div class="perk rv"><div class="n mono">02</div><h3>Founding member status</h3><p>Be part of the first group of Hoardrun members and get launch news before anyone else.</p></div>
-        <div class="perk rv"><div class="n mono">03</div><h3>Shape the product</h3><p>Tell us what matters to you. Early members help decide what we build next.</p></div>
+        <div class="perk rv"><div class="n mono">03</div><h3>Join the US pilot</h3><p>We're starting with 100 US users. Pilot members use Hoardrun free and help decide what we build next.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" style="padding-top:20px">
+    <div class="wrap">
+      <div class="head rv"><div><div class="eyebrow">The founders</div><h2>Built by people who<br>design, code and know banking.</h2></div>
+        <p class="sub">Self-funded for a year by the founders and family. We're building Hoardrun because most money apps show you charts, not what to do next.</p></div>
+      <div class="team">
+        <div class="person rv"><div class="av">JA</div><div><h3>Jude Azane</h3><div class="role">Co-founder &amp; CEO</div><p>Six years building software at Nelvic Consultancy. Product designer with an IT diploma, studying business administration at KNUST.</p></div></div>
+        <div class="person rv"><div class="av">AK</div><div><h3>Adarsh Kumar</h3><div class="role">Co-founder &amp; COO</div><p>Four years as a full-stack developer and four years as a banker. Leads product building and debugging.</p></div></div>
       </div>
     </div>
   </section>
@@ -439,11 +467,12 @@
     <div class="wrap">
       <div class="head rv" style="justify-content:center;text-align:center"><div><div class="eyebrow">FAQ</div><h2>Questions, answered.</h2></div></div>
       <div class="faq rv">
-        <details><summary>What is Hoardrun?</summary><p>Hoardrun is a financial technology company, not a bank. We're building one app for saving, spending and sending money, with low costs and clear information so you can decide for yourself.</p></details>
+        <details><summary>What is Hoardrun?</summary><p>Hoardrun is a financial technology company, not a bank. We're building one app to bank, save and invest, with an AI coach that gives you a plain-English next step. We're starting with US young professionals building an emergency fund and starting to invest.</p></details>
         <details><summary>Is Hoardrun live yet?</summary><p>Not yet. Everything on this page is in development or on our roadmap. Join the waitlist to follow the build and be among the first invited when accounts open.</p></details>
-        <details><summary>Who holds my money?</summary><p>Hoardrun is not a bank, and we aren't holding anyone's money today. We plan to work with licensed banking partners, and before any account opens we'll tell you exactly who holds customer funds and what protections apply.</p></details>
+        <details><summary>Who holds my money?</summary><p>Hoardrun is not a bank, and we aren't holding anyone's money today. Accounts will be provided through a licensed US partner bank, and investing through a registered broker. Before any account opens, we'll name our partners and explain what protections apply.</p></details>
+        <details><summary>How much will it cost?</summary><p>Free during the pilot. After that we plan to charge about $8 a month, and only once people find the coach worth coming back for.</p></details>
         <details><summary>Does joining the waitlist cost anything?</summary><p>No. Joining the waitlist is completely free, and there's no obligation to open an account when your invite arrives.</p></details>
-        <details><summary>When will I get access?</summary><p>We'll open access in waves once the app is ready, and waitlist members are invited first. We'll email you when your spot is ready.</p></details>
+        <details><summary>When will I get access?</summary><p>We're starting with a small US pilot of 100 users, then opening access in waves. Waitlist members are invited first, and we'll email you when your spot is ready.</p></details>
         <details><summary>What do you do with my information?</summary><p>We only use your details to manage your waitlist spot and send you launch updates. We don't sell your data, and you can unsubscribe any time.</p></details>
         <details><summary>Will Hoardrun work on my computer?</summary><p>That's the plan. We're building Hoardrun for both phone and computer.</p></details>
       </div>
